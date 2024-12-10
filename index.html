@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="御言者-专业的AI智能创作与算力共享平台，提供AI聊天、AI绘画、算力租用等服务">
+    <meta name="keywords" content="AI聊天,AI绘画,算力共享,算力币,人工智能">
+    <meta name="author" content="御言者">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / 社交媒体优化 -->
+    <meta property="og:title" content="御言者 - AI智能创作与算力共享平台">
+    <meta property="og:description" content="专业的AI智能创作与算力共享平台，让AI创作更简单">
+    <meta property="og:image" content="/assets/og-image.jpg">
+    <meta property="og:url" content="https://your-domain.com">
+    
+    <!-- 添加网站图标 -->
+    <link rel="icon" href="assets/images/favicon.ico">
+    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+    
+    <!-- 预加载关键资源 -->
+    <link rel="preload" href="assets/images/logo.png" as="image">
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload" href="config.js" as="script">
+    
+    <title>御言者 - AI智能创作与算力共享平台</title>
+    <link rel="stylesheet" href="theme.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- 在 head 中添加 -->
+    <meta name="theme-color" content="#ffffff">
+    <link rel="canonical" href="https://your-domain.com">
+    <meta name="application-name" content="御言者">
+</head>
+<body>
+    <div class="page-loader" style="display: none;">
+        <div class="loader-spinner"></div>
+        <p>加载中...</p>
+    </div>
+
+    <!-- 导航栏优化 -->
+    <nav class="navbar" role="navigation" aria-label="主导航">
+        <!-- 顶部栏：品牌和用户操作 -->
+        <div class="nav-top">
+            <div class="nav-brand">
+                <img src="assets/images/logo.png" alt="御言者" class="logo">
+                <a href="#home" class="brand-name">御言者</a>
+            </div>
+            <div class="user-section">
+                <button class="theme-toggle" onclick="toggleTheme()">
+                    <span class="light-icon">🌞</span>
+                    <span class="dark-icon">🌙</span>
+                </button>
+                <!-- 未登录状态的按钮 -->
+                <div class="auth-buttons">
+                    <a href="#login" class="nav-link login-btn">登录</a>
+                    <a href="#register" class="nav-link register-btn">注册</a>
+                </div>
+                <!-- 用户头像 -->
+                <div class="user-avatar">
+                    <img src="C:\Users\杨瑞禄\Desktop\御言者\头像.jpg" alt="用户头像">
+                    <div class="dropdown-menu">
+                        <a href="#profile">个人中心</a>
+                        <a href="#settings">设置</a>
+                        <a href="#logout">退出登录</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 左侧导航栏 -->
+        <div class="nav-side">
+            <button class="mobile-menu-toggle" aria-label="切换菜单">
+                <span class="menu-icon">☰</span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#ai-chat" class="nav-link">
+                    <span class="nav-icon">💬</span>
+                    <span class="nav-text">AI聊天</span>
+                </a></li>
+                <li><a href="#ai-draw" class="nav-link">
+                    <span class="nav-icon">🎨</span>
+                    <span class="nav-text">AI绘画</span>
+                </a></li>
+                <li><a href="#computing" class="nav-link">
+                    <span class="nav-icon">⚡</span>
+                    <span class="nav-text">算力</span>
+                </a></li>
+                <li><a href="#tasks" class="nav-link">
+                    <span class="nav-icon">📋</span>
+                    <span class="nav-text">任务中心</span>
+                </a></li>
+                <li><a href="#community" class="nav-link">
+                    <span class="nav-icon">👥</span>
+                    <span class="nav-text">社区</span>
+                </a></li>
+                <li><a href="#contact" class="nav-link">
+                    <span class="nav-icon">✉️</span>
+                    <span class="nav-text">联系作者</span>
+                </a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 主要内容区域 -->
+    <main>
+        <!-- 首页 -->
+        <section id="home" class="page active">
+            <div class="hero-section">
+                <div class="hero-content">
+                    <h1>御言者</h1>
+                    <p class="subtitle">每一个动作都有价值</p>
+                    <div class="value-props">
+                        <div class="value-item">
+                            <span class="icon">🎯</span>
+                            <p>精准对话</p>
+                        </div>
+                        <div class="value-item">
+                            <span class="icon">⚡</span>
+                            <p>快速响应</p>
+                        </div>
+                        <div class="value-item">
+                            <span class="icon">🎨</span>
+                            <p>创意无限</p>
+                        </div>
+                    </div>
+                    <div class="cta-buttons">
+                        <button class="primary-btn pulse">立即体验</button>
+                        <button class="secondary-btn">了解更多</button>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <!-- 添加动态展示效果 -->
+                </div>
+            </div>
+
+            <div class="features-section">
+                <h2>平台特色</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🎨</div>
+                        <h3>AI文生图</h3>
+                        <p>专业的AI绘画服务，将你的创意转化为精美图片</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">💻</div>
+                        <h3>算力共享</h3>
+                        <p>出租闲置算力，轻松赚取算力币</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">💰</div>
+                        <h3>算力币交易</h3>
+                        <p>安全、便捷的算力币交易平台</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🤖</div>
+                        <h3>AI助手</h3>
+                        <p>智能对话，解答疑惑</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI聊天页面 -->
+        <section id="ai-chat" class="page">
+            <div class="chat-container">
+                <div class="chat-header">
+                    <h2>无问芯穹</h2>
+                    <p class="subtitle">基于通义千问2.5-72B大语言模型</p>
+                    <div class="model-selector">
+                        <select class="ai-model-select">
+                            <option value="qwen2.5-72b-instruct">千问2.5-72B</option>
+                        </select>
+                    </div>
+                    <div class="chat-controls">
+                        <button class="voice-input-btn" title="语音输入">🎤</button>
+                        <button class="export-btn" title="导出记录">📤</button>
+                        <button class="clear-chat-btn" title="清除记录">🗑️</button>
+                        <button class="new-chat-btn" title="新对话">➕</button>
+                    </div>
+                </div>
+                
+                <div class="chat-workspace">
+                    <div class="chat-sidebar">
+                        <div class="history-list">
+                            <!-- 对话历史将动态插入这里 -->
+                        </div>
+                    </div>
+                    
+                    <div class="chat-main">
+                        <div class="chat-history">
+                            <!-- 聊天记录将在这里显示 -->
+                        </div>
+                        <div class="chat-input-area">
+                            <textarea 
+                                class="chat-input" 
+                                placeholder="输入你的问题，按Enter发送，Shift+Enter换行..."
+                                rows="1"
+                            ></textarea>
+                            <button class="send-btn">发送</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI绘画页面 -->
+        <section id="ai-draw" class="page">
+            <div class="image-generation">
+                <div class="image-header">
+                    <h2>AI文生图</h2>
+                    <p class="subtitle">基于CogView-3大模型</p>
+                    <div class="model-selector">
+                        <select class="sd-model-select">
+                            <option value="cogview-3-plus">CogView-3 Plus</option>
+                            <option value="cogview-3">CogView-3</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="image-workspace">
+                    <div class="left-panel">
+                        <!-- 提示词输入区 -->
+                        <div class="prompt-section">
+                            <div class="prompt-group">
+                                <label>图片描述</label>
+                                <textarea class="positive-prompt" 
+                                        placeholder="描述你想要生成的图片内容..."
+                                        rows="3"></textarea>
+                            </div>
+                        </div>
+
+                        <!-- 图片尺寸设置 -->
+                        <div class="setting-group dimensions">
+                            <label>图片尺寸</label>
+                            <select class="size-select">
+                                <option value="1024x1024">1024 x 1024</option>
+                                <option value="768x1344">768 x 1344</option>
+                                <option value="864x1152">864 x 1152</option>
+                                <option value="1344x768">1344 x 768</option>
+                                <option value="1152x864">1152 x 864</option>
+                                <option value="1440x720">1440 x 720</option>
+                                <option value="720x1440">720 x 1440</option>
+                            </select>
+                        </div>
+
+                        <!-- 生成控制按钮 -->
+                        <div class="generation-controls">
+                            <button class="generate-btn">生成</button>
+                            <button class="interrupt-btn" disabled>中断</button>
+                            <button class="skip-btn" disabled>跳过</button>
+                        </div>
+                    </div>
+
+                    <div class="right-panel">
+                        <!-- 图片预览区 -->
+                        <div class="preview-area">
+                            <div class="preview-tabs">
+                                <button class="tab active" data-tab="output">输出</button>
+                                <button class="tab" data-tab="gallery">画廊</button>
+                            </div>
+                            
+                            <div class="preview-content">
+                                <div class="output-panel active">
+                                    <div class="image-grid"></div>
+                                    <div class="generation-progress" style="display: none;">
+                                        <div class="progress-bar"></div>
+                                        <div class="progress-text">生成中... 0%</div>
+                                    </div>
+                                </div>
+                                <div class="gallery-panel">
+                                    <!-- 历史图片将在这里显示 -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 算力页面 -->
+        <section id="computing" class="page">
+            <div class="computing-container">
+                <!-- 算力概览 -->
+                <div class="computing-overview">
+                    <h2>算力管理</h2>
+                    <div class="computing-stats">
+                        <div class="stat-card">
+                            <h3>当前算力</h3>
+                            <p class="stat-value">0 TFLOPS</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>算力币余额</h3>
+                            <p class="stat-value">0 算力币</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>在线时长</h3>
+                            <p class="stat-value">0 小时</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 算力操作区 -->
+                <div class="computing-actions">
+                    <div class="mining-section">
+                        <h3>算力租用</h3>
+                        <div class="computing-controls">
+                            <button class="start-mining">开始租用</button>
+                            <button class="stop-mining" disabled>停止租用</button>
+                        </div>
+                        <div class="computing-chart">
+                            <!-- 算力监控图表 -->
+                        </div>
+                    </div>
+
+                    <div class="trading-section">
+                        <h3>算力币交易</h3>
+                        <div class="market-stats">
+                            <div class="stat-item">
+                                <span class="label">当前价格</span>
+                                <span class="value">¥2.35</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="label">24h成交量</span>
+                                <span class="value">1,234,567</span>
+                            </div>
+                        </div>
+                        <div class="trade-panel">
+                            <div class="trade-tabs">
+                                <button class="tab-btn active">买入</button>
+                                <button class="tab-btn">卖出</button>
+                            </div>
+                            <div class="trade-form">
+                                <!-- 保持原有的交易表单内容 -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 任务中心页面 -->
+        <section id="tasks" class="page">
+            <div class="tasks-container">
+                <div class="tasks-header">
+                    <h2>任务中心</h2>
+                    <button class="create-task-btn">发布新任务</button>
+                </div>
+                
+                <div class="tasks-filter">
+                    <div class="filter-group">
+                        <label>任务类型</label>
+                        <select class="task-type-filter">
+                            <option value="all">全部</option>
+                            <option value="image">生图</option>
+                            <option value="computing">算力任务</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>状态</label>
+                        <select class="task-status-filter">
+                            <option value="all">全部</option>
+                            <option value="open">待接单</option>
+                            <option value="in-progress">进行中</option>
+                            <option value="completed">已完成</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>排序</label>
+                        <select class="task-sort-filter">
+                            <option value="latest">最新发布</option>
+                            <option value="price-high">报酬最</option>
+                            <option value="deadline">截止最近</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="tasks-list">
+                    <!-- 任务列表将在这里显示 -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 社区页面优化 -->
+        <section id="community" class="page">
+            <div class="community-container">
+                <!-- 添加内容过滤器 -->
+                <div class="content-filter">
+                    <button class="filter-btn active" data-filter="all">全部</button>
+                    <button class="filter-btn" data-filter="ai-chat">AI对话</button>
+                    <button class="filter-btn" data-filter="ai-art">AI绘画</button>
+                    <button class="filter-btn" data-filter="discussion">讨论</button>
+                </div>
+                
+                <!-- 化子展示区域 -->
+                <div class="posts-grid">
+                    <!-- 帖子卡片模板 -->
+                    <div class="post-card" data-category="ai-chat">
+                        <div class="post-header">
+                            <div class="user-info">
+                                <img src="default-avatar.png" alt="用户头像" class="user-avatar">
+                                <div class="user-details">
+                                    <span class="username">创作者小明</span>
+                                    <span class="post-time">2小时前</span>
+                                </div>
+                            </div>
+                            <div class="post-category">文生图作品</div>
+                        </div>
+                        <div class="post-content">
+                            <h3 class="post-title">分享一组科幻风格的AI作品</h3>
+                            <p class="post-text">今天尝试了一些未来科幻风格的提示词，效果非常惊艳...</p>
+                            <div class="post-images">
+                                <!-- 作品图展示 -->
+                            </div>
+                        </div>
+                        <div class="post-footer">
+                            <div class="post-actions">
+                                <button class="action-btn like-btn" aria-label="点赞" role="button">
+                                    <span class="icon" aria-hidden="true">👍</span>
+                                    <span class="count" aria-label="点赞数">42</span>
+                                </button>
+                                <button class="action-btn comment-btn">
+                                    <span class="icon">💬</span>
+                                    <span class="count">18</span>
+                                </button>
+                                <button class="action-btn share-btn">
+                                    <span class="icon">🔗</span>
+                                    <span class="count">5</span>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- 添加互动统计 -->
+                        <div class="post-stats">
+                            <span class="views">👁️ 1.2k</span>
+                            <span class="likes">❤️ 42</span>
+                            <span class="comments">💬 18</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 添加加载更多按钮 -->
+                <button class="load-more-btn">加载更多</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.3.3/purify.min.js"></script>
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
